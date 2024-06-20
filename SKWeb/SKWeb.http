@@ -1,0 +1,6 @@
+@SKWeb_HostAddress = http://localhost:5134
+
+GET {{SKWeb_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
