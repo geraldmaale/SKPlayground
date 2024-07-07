@@ -8,19 +8,26 @@
     <UserSecretsId>44d031c3-0f79-4bdb-aba1-74a9f90d7d14</UserSecretsId>
   </PropertyGroup>
 
+<!--  <ItemGroup>-->
+<!--    <PackageReference Include="Microsoft.Extensions.Compliance.Redaction" Version="8.6.0" />-->
+<!--    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />-->
+<!--    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />-->
+<!--    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="8.0.0" />-->
+<!--    <PackageReference Include="Microsoft.Extensions.Http.Resilience" Version="8.6.0" />-->
+<!--    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="8.0.0" />    -->
+<!--    <PackageReference Include="Microsoft.SemanticKernel.Plugins.Core" Version="1.15.0-alpha" />-->
+<!--    <PackageReference Include="Microsoft.SemanticKernel.Plugins.OpenApi" Version="1.15.0-alpha" />-->
+<!--    <PackageReference Include="Microsoft.SemanticKernel.Plugins.Web" Version="1.15.0-alpha" />-->
+<!--  </ItemGroup>-->
+
   <ItemGroup>
-    <PackageReference Include="JC.SemanticKernel.Connectors.Mistral" Version="1.5.0" />
-    <PackageReference Include="Microsoft.Extensions.Compliance.Redaction" Version="8.5.0" />
-    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="8.0.1" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="6.0.1" />
-    <PackageReference Include="Microsoft.Extensions.Http.Resilience" Version="8.5.0" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="8.0.0" />
-    <PackageReference Include="Microsoft.SemanticKernel" Version="1.13.0" />
-    <PackageReference Include="Microsoft.SemanticKernel.Plugins.Core" Version="1.13.0-alpha" />
-    <PackageReference Include="Microsoft.SemanticKernel.Plugins.OpenApi" Version="1.13.0-alpha" />
-    <PackageReference Include="Microsoft.SemanticKernel.Plugins.Web" Version="1.13.0-alpha" />
+    <ProjectReference Include="..\SKShared\SKShared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

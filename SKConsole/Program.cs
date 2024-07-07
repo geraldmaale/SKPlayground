@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using System.ComponentModel;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.SemanticKernel;
@@ -13,8 +14,9 @@ var configBuilder = new ConfigurationBuilder()
     .Build();
 
 var azureOpenAIApiKey = configBuilder["AzureOpenAI:ApiKey"];
-var azureOpenAIUri = configBuilder["AzureOpenAI:Uri"];
+var azureOpenAIUri = configBuilder["AzureOpenAI:Endpoint"];
 var bingSearchApiKey = configBuilder["BingSearch:ApiKey"];
+var azureOpenAIDeploymentName = configBuilder["AzureOpenAI:ChatDeploymentName"];
 
 var builder = Kernel.CreateBuilder();
 
@@ -30,7 +32,7 @@ builder.Services.ConfigureHttpClientDefaults(httpClientBuilder =>
 builder.Services.AddRedaction();
 
 var kernel = builder
-    .AddAzureOpenAIChatCompletion("gpt-35-turbo", endpoint: azureOpenAIUri!, apiKey: azureOpenAIApiKey!)
+    .AddAzureOpenAIChatCompletion(azureOpenAIDeploymentName!, endpoint: azureOpenAIUri!, apiKey: azureOpenAIApiKey!)
     .Build();
 
 //Use plugins

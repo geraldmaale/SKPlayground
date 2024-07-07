@@ -6,6 +6,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SKWeb", "SKWeb\SKWeb.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SKConsole", "SKConsole\SKConsole.csproj", "{EC138969-472A-4B99-8D75-7F77D45404A0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeAutomation", "HomeAutomation\HomeAutomation.csproj", "{23AB58ED-CDAA-4E61-A472-AF97B8C48E80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SKShared", "SKShared\SKShared.csproj", "{CD3535D5-D472-43B8-A6DA-D5019B58EC37}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +24,14 @@ Global
 		{EC138969-472A-4B99-8D75-7F77D45404A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC138969-472A-4B99-8D75-7F77D45404A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC138969-472A-4B99-8D75-7F77D45404A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23AB58ED-CDAA-4E61-A472-AF97B8C48E80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23AB58ED-CDAA-4E61-A472-AF97B8C48E80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23AB58ED-CDAA-4E61-A472-AF97B8C48E80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23AB58ED-CDAA-4E61-A472-AF97B8C48E80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD3535D5-D472-43B8-A6DA-D5019B58EC37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD3535D5-D472-43B8-A6DA-D5019B58EC37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD3535D5-D472-43B8-A6DA-D5019B58EC37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD3535D5-D472-43B8-A6DA-D5019B58EC37}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
