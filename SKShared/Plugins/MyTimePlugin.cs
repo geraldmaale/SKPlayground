@@ -19,6 +19,7 @@ public class MyTimePlugin(ILogger<MyTimePlugin> logger)
     [KernelFunction, Description("Events in 2024")]
     public List<string> Events2024()
     {
+        _logger.LogInformation( "Fetching events in 2024" );
         return
         [
             "Christmas",

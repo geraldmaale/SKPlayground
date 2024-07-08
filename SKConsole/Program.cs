@@ -1,5 +1,4 @@
-﻿using System.ComponentModel;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.SemanticKernel;
@@ -31,6 +30,7 @@ builder.Services.ConfigureHttpClientDefaults(httpClientBuilder =>
 });
 builder.Services.AddRedaction();
 
+// SK
 var kernel = builder
     .AddAzureOpenAIChatCompletion(azureOpenAIDeploymentName!, endpoint: azureOpenAIUri!, apiKey: azureOpenAIApiKey!)
     .Build();

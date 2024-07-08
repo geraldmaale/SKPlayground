@@ -4,11 +4,15 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>7faa3658-10fa-4da7-a537-2c81bab50af2</UserSecretsId>
+    <UserSecretsId>2a759b28-4e29-454d-8e63-154c17e7da59</UserSecretsId>
   </PropertyGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\SKShared\SKShared.csproj" />
-	</ItemGroup>	
+		<Folder Include="wwwroot\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.17" />
+	</ItemGroup>
 
 </Project>

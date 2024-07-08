@@ -14,6 +14,7 @@ builder
     .ValidateOnStart();
 
 builder.Services.AddKernel();
+builder.Services.AddAntiforgery();
 
 // Chat completion service that kernels will use
 builder.Services.AddSingleton<IChatCompletionService>(sp =>
@@ -30,6 +31,8 @@ builder.Services.AddSingleton<IChatCompletionService>(sp =>
 
 var app = builder.Build();
 
+app.UseAntiforgery();
+
 app.MapGet(
     "/weatherforecast",
     async (Kernel kernel) =>
@@ -41,11 +44,6 @@ app.MapGet(
         return new WeatherForecast(DateOnly.FromDateTime(DateTime.Now), temperature, summary);
     }
 );
-
-app.MapPost("/turn-light-off", () =>
-{
-    
-});
 
 app.Run();
 
